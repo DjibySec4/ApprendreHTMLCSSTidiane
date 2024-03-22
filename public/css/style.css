@@ -1,0 +1,79 @@
+/* ================================================= */
+/* ============== Stylisation du menu ============== */
+/* ================================================= */
+
+/* Selectionne toutes les balises possedant l'id menu */
+#menu
+{
+    /* Supprime les points de la balise ul */
+    list-style-type: none;
+    /* Pour mettre une image de fond */
+    background-color: #333;
+    /* Affiche le background masqué par float: left;*/
+    overflow: hidden;
+}
+
+/* Permet de mettre les liens sur la meme ligne */
+li
+{
+    float: left;
+}
+
+/* Selectionne toutes les balises a qui sont dans une balise li */
+li a
+{
+    padding: 14px 16px;
+    display: inline-block;
+    color: white;
+    /* Supprime les soulignement sur les liens */
+    text-decoration: none;
+}
+
+li a:hover
+{
+    background-color: #111;
+}
+
+/* Selectionne la balise qui a l'id actif */
+#actif
+{
+    background-color: brown;
+}
+
+/* Selectionne la balise possedant l'id button-menu  */
+#button-menu
+{
+    float: right;
+    margin: 9px;
+    margin-right: 30px;
+}
+
+/* Selectionne ttes les balises button qui sont dans une balise
+    possedant l'id button-menu */
+#button-menu button
+{
+    color: white;
+    background-color: brown;
+    border: 1px solid brown;
+    padding: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/* ================================================= */
+/* ============== Stylisation Baniere ============== */
+/* ================================================= */
+#baniere
+{
+    background: url("../images/baniere.jpeg");
+    display: flex; /* permet d'ocuper tte l'espace dispo*/
+    justify-content: center; /* centrer de la guache vers la droite*/
+    height: 250px;
+    align-items: center; /* centrer du haut vers le bas*/
+    color: brown;
+    font: bold 3em 'Dacing Script'; /*Gras, taille, police*/
+    opacity: 0.8; opacity: 1; /* Pour flouter. Sa valeur est comprise entre 0 et 1*/
+    text-shadow: white 5px 2px 1px;
+  
+}
+

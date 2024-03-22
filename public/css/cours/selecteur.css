@@ -1,0 +1,91 @@
+/* ✅Les selecteurs d'element : On passe par le nom de la balise pour
+      pour selectionnerla balise . Ex p{ }*/
+
+/* ✅Les selecteurs de d'attribut : On passe par l'attribut de la balise
+      pour selectionnerla balise
+
+    1. [attr] : Je Selectionne toute les balises possedant l'attribut attr
+
+    2. [attr = "valeur"] : Je Selectionne toute les balises dont la valeur de l'attribut
+       est exactement valeur
+
+    3. [attr |= "valeur"] : Je Selectionne toute les balises dont la valeur de l'attribut
+       est exactement valeur ou valeur suivi par un tiret.
+
+    4. [attr ~= "hello"] : Je Selectionne toute les balises dont la valeur de l'attribut
+       est exactement hello.
+
+    5. [attr *= "hello"] : Je Selectionne toute les balises dont la valeur de l'attribut
+       contient une occurence de hello.
+
+    6. [attr ^= "hello"] : Je Selectionne toute les balises dont la valeur de l'attribut
+       commence par hello.
+
+    7. [attr $= "hello"] : Je Selectionne toute les balises dont la valeur de l'attribut
+       se termine par hello.
+    
+    8. On peut utiliser i => insensible à la casse ou s => sensible à la casse à la fin de
+       chaque selecteur d'attribut
+*/
+
+/* Selectionner toutes les liens dont dont la valeur de l'attribut href se termine par sn */
+[href $="sn"]
+{
+   background-color: yellow;
+}
+
+/* Selectionner toutes les paragraphes dont la valeur de leur id contient Hello*/
+p[id *="Hello" i]
+{
+   color: red;
+}
+
+
+/* ✅ Les selecteurs de classe :  On passe par l'attribut class de la balise
+      pour selectionnerla balise*/
+/* Changer le background de toutes les balises possedant la classe link */
+.link
+{
+   background-color: bisque;
+}
+
+/* Barrer toutes les balises possedant la classe link et se trouvant dans une strong */
+strong.link
+{
+   text-decoration: line-through; /* pour barrer un text */
+   font-size: 18px;
+}
+
+
+/* Mettez un top surlignage de toutes les balises strong possedant en meme temps
+les classes link3 et link4  */
+
+/* Premiere methode */
+strong.link3, strong.link4
+{
+   text-decoration: overline;
+}
+
+/* Deuxieme methode */
+strong.link3.link4
+{
+   text-decoration: overline;
+}
+
+/* Troisieme methode */
+strong[class *="link3"], strong[class *="link4"]
+{
+   text-decoration: overline;
+}
+
+
+/* ✅ Les selecteurs de d'identifiant On passe par l'attribut id de la balise
+      pour selectionner la balise (#)*/
+
+/* Mettez une bordure sur tous les paragraphes possedant l'id p2 */
+p#p2
+{
+   border: 1px solid black;
+   padding: 5px;
+   width: 100px;
+}

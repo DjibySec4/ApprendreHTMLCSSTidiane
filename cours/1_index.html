@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours</title>
+</head>
+<body> 
+
+    <h1>Les listes</h1>
+    <!-- Liste non ordonée -->
+    <ul>
+        <li type="disc">Item 1</li>
+        <li type="circle">Item 2</li>
+        <li type="square">Item 3</li>
+        <li type="none">Item 4</li>
+        <li>Item 5
+            <ul>
+                <li>1ere Sous Item 5 </li>
+                <li>2em Sous Item 5
+                    <ul>
+                        <li type="disc">test 1</li>
+                        <li>test 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <!-- Liste ordonée (a, A, 1, I) -->
+    <ol type="a">
+        <li >Item 1</li>
+        <li type="1">Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <!-- Liste de description -->
+    <dl>
+        <dt>Titre 1</dt>
+        <dd>Description 1</dd>
+
+        <dt>Titre 2</dt>
+        <dd>Description 2</dd>
+    </dl>
+    <hr>
+
+
+    <!-- Balise de type bloc et de type inline -->
+    <style>
+        /* Selectionne la balise a et p */
+        a, p
+        {
+            border: 1px solid black;
+        }
+
+        /*  Selectionne uniquement la balise a*/
+        a
+        {
+            height: 60px;
+        }
+
+        /*  Selectionne uniquement la balise p*/
+        p
+        {
+            height: 60px;
+        }
+    </style>
+    <h1>Balise de type bloc et de type inline</h1>
+    <a href="#">Un lien - je suis une balise de type inline</a>
+    <p>Un paragraphe - je suis une balise de type bloc</p>
+
+</body>
+</html>
